@@ -32,18 +32,18 @@
  *  GLOBAL VARIABLES
  **********************/
 
-/*Fonts*/
+/* Global Styles */
+
+/* Fonts */
 lv_font_t * inter_sm;
-extern lv_font_t inter_sm_data;
 lv_font_t * inter_md;
 lv_font_t * inter_xl;
 
-/*Images*/
+/* Images */
 const void * lvgl_logo;
 const void * wink;
 
 /*Subjects*/
-
 lv_subject_t subject_room_1_temp;
 
 /**********************
@@ -58,10 +58,15 @@ void examples_init_gen(const char * asset_path)
 {
     char buf[256];
 
+    /* Global Styles */
+
+    /* Subjects */
     lv_subject_init_int(&subject_room_1_temp, 20);
 
-    /* get font 'inter_sm' from a C array */
-    inter_sm = &inter_sm_data;
+    /* Fonts */
+    /* create tiny ttf font "inter_sm" from file */
+    lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/Inter-SemiBold.ttf");
+    inter_sm = lv_tiny_ttf_create_file(buf, 14);
     /* create tiny ttf font "inter_md" from file */
     lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/Inter-SemiBold.ttf");
     inter_md = lv_tiny_ttf_create_file(buf, 18);
@@ -69,6 +74,7 @@ void examples_init_gen(const char * asset_path)
     lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/Inter-SemiBold.ttf");
     inter_xl = lv_tiny_ttf_create_file(buf, 22);
 
+    /* Images */
     lv_snprintf(buf, 256, "%s%s", asset_path, "images/lvgl.png");
     lvgl_logo = lv_strdup(buf);
     lv_snprintf(buf, 256, "%s%s", asset_path, "images/wink.png");
@@ -86,8 +92,11 @@ void examples_init_gen(const char * asset_path)
         lv_xml_register_image(NULL, "wink", wink);
 
         lv_xml_register_subject(NULL, "room_1_temp", &subject_room_1_temp);
+
     #endif
 }
+
+/* callbacks */
 
 /**********************
  *   STATIC FUNCTIONS

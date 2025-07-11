@@ -22,8 +22,6 @@ extern "C" {
 /*Include all the widget and components of this library*/
 #include "widgets/dark_slider/dark_slider_gen.h"
 #include "widgets/slider_box/slider_box_gen.h"
-#include "widgets/dark_slider/dark_slider_gen.h"
-#include "widgets/slider_box/slider_box_gen.h"
 #include "components/buttons/button_default_gen.h"
 #include "components/buttons/button_error_gen.h"
 #include "components/buttons/button_warning_gen.h"
@@ -48,20 +46,25 @@ extern "C" {
  * GLOBAL VARIABLES
  **********************/
 
-/*Fonts*/
+/* Global Styles */
+
+/* Fonts */
 extern lv_font_t * inter_sm;
 extern lv_font_t * inter_md;
 extern lv_font_t * inter_xl;
 
-/*Images*/
+/* Images */
 extern const void * lvgl_logo;
 extern const void * wink;
 
+/* Subjects */
 extern lv_subject_t subject_room_1_temp;
 
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
+
+/* callbacks */
 
 /**
  * Initialize the component library

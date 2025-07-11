@@ -4,8 +4,8 @@
         <file name="wink" src_path="images/wink.png" file_format="png"/>
     </images>
      <fonts>
-        <bin name="inter_sm" src_path="fonts/Inter-SemiBold.ttf" size="14" bpp="8"
-        />
+        <!-- <bin name="inter_sm" src_path="fonts/Inter-SemiBold.ttf" size="14" bpp="8"/> -->
+        <tiny_ttf name="inter_sm" src_path="fonts/Inter-SemiBold.ttf" size="14" as_file="true"/>
         <tiny_ttf name="inter_md" src_path="fonts/Inter-SemiBold.ttf" size="18" as_file="true"/>
         <tiny_ttf name="inter_xl" src_path="fonts/Inter-SemiBold.ttf" size="22" as_file="true"/>
     </fonts>

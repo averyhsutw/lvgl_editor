@@ -37,7 +37,7 @@ lv_obj_t * h3_create(lv_obj_t * parent, const char * heading_text)
 
     static bool style_inited = false;
 
-    if(!style_inited) {
+    if (!style_inited) {
         
         lv_style_init(&style_main);
         lv_style_set_text_font(&style_main, inter_sm);

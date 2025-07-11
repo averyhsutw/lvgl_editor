@@ -37,7 +37,7 @@ lv_obj_t * scratchpad_create(lv_obj_t * parent)
 
     static bool style_inited = false;
 
-    if(!style_inited) {
+    if (!style_inited) {
         
         lv_style_init(&style_slider_cont);
         lv_style_set_layout(&style_slider_cont, LV_LAYOUT_FLEX);
