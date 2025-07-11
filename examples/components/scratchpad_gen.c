@@ -42,6 +42,7 @@ lv_obj_t * scratchpad_create(lv_obj_t * parent)
         lv_style_init(&style_slider_cont);
         lv_style_set_layout(&style_slider_cont, LV_LAYOUT_FLEX);
         lv_style_set_flex_flow(&style_slider_cont, LV_FLEX_FLOW_ROW);
+        // lv_style_set_bg_opa(&style_slider_cont, 100%);
         lv_style_set_bg_opa(&style_slider_cont, 100);
         lv_style_set_border_opa(&style_slider_cont, 0);
         lv_style_set_flex_cross_place(&style_slider_cont, LV_FLEX_ALIGN_CENTER);
