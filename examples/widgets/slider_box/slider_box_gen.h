@@ -13,7 +13,13 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lvgl/lvgl.h"
+#ifdef LV_LVGL_H_INCLUDE_SIMPLE
+    #include "lvgl.h"
+#else
+    #include "lvgl/lvgl.h"
+#endif
+
+#include "examples_gen.h"
 
 /*********************
  *      DEFINES
@@ -22,6 +28,8 @@ extern "C" {
 /**********************
  *      TYPEDEFS
  **********************/
+
+
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -36,11 +44,11 @@ lv_obj_t * slider_box_create(lv_obj_t * parent);
 
 
 /**
- * Set the title
+ * slider_box title
  * @param obj   pointer to a slider_box
  * @param title  title
  */
-void slider_box_set_title(lv_obj_t * obj, const char * title);
+void slider_box_set_title(lv_obj_t * slider_box, const char * title);
 
 /**********************
  *      MACROS

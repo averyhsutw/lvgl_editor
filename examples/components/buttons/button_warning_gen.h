@@ -12,7 +12,11 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lvgl/lvgl.h"
+#ifdef LV_LVGL_H_INCLUDE_SIMPLE
+    #include "lvgl.h"
+#else
+    #include "lvgl/lvgl.h"
+#endif
 
 /*********************
  *      DEFINES
@@ -25,6 +29,7 @@ extern "C" {
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
+
 
 lv_obj_t * button_warning_create(lv_obj_t * parent, const char * button_label);
 

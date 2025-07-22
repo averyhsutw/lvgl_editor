@@ -24,13 +24,16 @@
                bg_color="0x222222"
                /> 
     </styles>
-    <view extends="lv_obj" styles="main" align="center"> 
-        <lv_button width="30" height="30" styles="button">
+    <view extends="lv_obj" align="center"> 
+        <style name="main" />
+        <lv_button width="30" height="30">
+            <style name="button" />
             <lv_label text="-"  align="center"/>
         </lv_button>
         <lv_label align="top_mid" text="Title" flex_grow="1" style_text_align="center" width="content" long_mode="scroll"/>
 
-        <lv_button  width="30"  height="30" styles="button">
+        <lv_button  width="30"  height="30">
+            <style name="button" />
             <lv_label text="+" align="center"/>
         </lv_button>
         <dark_slider  width="100%" color="0x44aaff" style_margin_hor="10"/>

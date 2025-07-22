@@ -1,0 +1,21 @@
+list(
+  APPEND
+  PROJECT_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/dark_slider/dark_slider.c
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/dark_slider/dark_slider_xml_parser.c
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/dark_slider/dark_slider_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/slider_box/slider_box.c
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/slider_box/slider_box_xml_parser.c
+  ${CMAKE_CURRENT_LIST_DIR}/widgets/slider_box/slider_box_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/buttons/button_default_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/buttons/button_error_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/buttons/button_warning_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/headings/h1_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/headings/h2_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/headings/h3_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/scratchpad_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/home_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/examples_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/ui.c
+  ${CMAKE_CURRENT_LIST_DIR}/examples.c
+  ${CMAKE_CURRENT_LIST_DIR}/images/lvgl_logo_data.c)

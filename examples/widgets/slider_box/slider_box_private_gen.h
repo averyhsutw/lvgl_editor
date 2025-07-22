@@ -27,13 +27,15 @@ extern "C" {
 typedef struct {
     lv_obj_t obj;  /* Base widget to extend */
     const char * title;
-    lv_obj_t * lv_button_1;
+    lv_obj_t * lv_button_0;
+    lv_obj_t * lv_label_0;
     lv_obj_t * lv_label_1;
+    lv_obj_t * lv_button_1;
     lv_obj_t * lv_label_2;
-    lv_obj_t * lv_button_2;
-    lv_obj_t * lv_label_3;
-    lv_obj_t * dark_slider_1;
+    lv_obj_t * dark_slider_0;
 } slider_box_t;
+
+extern const lv_obj_class_t slider_box_class;
 
 /**********************
  * GLOBAL PROTOTYPES

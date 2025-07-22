@@ -19,7 +19,8 @@
         />
     </styles>
 
-    <view extends="lv_button" styles="main">
+    <view extends="lv_button">
+        <style name="main"/>
         <h3 heading_text="$button_label" align="center"/>
     </view>
 </component>

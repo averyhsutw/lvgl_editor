@@ -1,12 +1,13 @@
 
 #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
 #include "lvgl.h"
+#elif defined(LV_LVGL_H_INCLUDE_SYSTEM)
+#include <lvgl.h>
 #elif defined(LV_BUILD_TEST)
 #include "../lvgl.h"
 #else
 #include "lvgl/lvgl.h"
 #endif
-
 
 #ifndef LV_ATTRIBUTE_MEM_ALIGN
 #define LV_ATTRIBUTE_MEM_ALIGN
@@ -139,13 +140,15 @@ uint8_t lvgl_logo_data_map[] = {
 };
 
 const lv_image_dsc_t lvgl_logo_data = {
-  .header.magic = LV_IMAGE_HEADER_MAGIC,
-  .header.cf = LV_COLOR_FORMAT_RGB565,
-  .header.flags = 0,
-  .header.w = 300,
-  .header.h = 115,
-  .header.stride = 600,
-  .header.reserved_2 = 0,
+  .header = {
+    .magic = LV_IMAGE_HEADER_MAGIC,
+    .cf = LV_COLOR_FORMAT_RGB565,
+    .flags = 0,
+    .w = 300,
+    .h = 115,
+    .stride = 600,
+    .reserved_2 = 0,
+  },
   .data_size = sizeof(lvgl_logo_data_map),
   .data = lvgl_logo_data_map,
   .reserved = NULL,

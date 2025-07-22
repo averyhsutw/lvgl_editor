@@ -24,7 +24,9 @@
     </styles>
 
     <view extends="lv_slider" 
-          styles="main light_knob:knob blue_indicator:indicator" 
-          align="center" range="20 40" send_draw_task_events="true">
+          align="center" min_value="20" max_value="40" send_draw_task_events="true">
+          <style name="main" />
+          <style name="light_knob" selector="knob"/>
+          <style name="blue_indicator" selector="indicator"/>
     </view>
 </widget>

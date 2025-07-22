@@ -39,8 +39,11 @@
                />
     </styles>
 
-    <view extends="lv_obj" styles="main">
-        <lv_obj styles="cont left_cont">
+    <view extends="lv_obj">
+        <style name="main" />
+        <lv_obj>
+            <style name="cont" />
+            <style name="left_cont" />
             <slider_box width="#slider_box_width" title="Room 1"/>
             <slider_box width="#slider_box_width" title="Room 2"/>
             <slider_box width="#slider_box_width" title="Room 3"/>
@@ -48,10 +51,12 @@
             <slider_box width="#slider_box_width" title="Room 5"/>
         </lv_obj>
 
-        <lv_obj styles="cont right_cont" flex_grow="1">
+        <lv_obj flex_grow="1">
+            <style name="cont" />
+            <style name="right_cont" />
             <button_default button_label="Ok"/>
             <button_default button_label="Cancel"/>
-            <dark_slider width="100%"  color="0xf03c0f"/>
+            <dark_slider width="100%"  color="0xee7a4d"/>
             <button_warning button_label="Alert 1"/>
             <button_warning button_label="Alert 2"/>
             <button_error button_label="Error 1"/>

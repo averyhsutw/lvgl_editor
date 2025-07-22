@@ -17,7 +17,76 @@ extern "C" {
  *      INCLUDES
  *********************/
 
-#include "lvgl/lvgl.h"
+#ifdef LV_LVGL_H_INCLUDE_SIMPLE
+    #include "lvgl.h"
+#else
+    #include "lvgl/lvgl.h"
+#endif
+
+/*********************
+ *      DEFINES
+ *********************/
+
+
+
+/**********************
+ *      TYPEDEFS
+ **********************/
+
+
+
+/**********************
+ * GLOBAL VARIABLES
+ **********************/
+
+/*-------------------
+ * Permanent screens
+ *------------------*/
+
+/*----------------
+ * Global styles
+ *----------------*/
+
+
+/*----------------
+ * Fonts
+ *----------------*/
+extern lv_font_t * inter_sm;
+extern lv_font_t * inter_md;
+extern lv_font_t * inter_xl;
+
+/*----------------
+ * Images
+ *----------------*/
+extern const void * lvgl_logo;
+extern const void * wink;
+
+/*----------------
+ * Subjects
+ *----------------*/
+extern lv_subject_t room_1_temp;
+
+/**********************
+ * GLOBAL PROTOTYPES
+ **********************/
+
+/*----------------
+ * Event Callbacks
+ *----------------*/
+
+/**
+ * Initialize the component library
+ */
+
+void examples_init_gen(const char * asset_path);
+
+/**********************
+ *      MACROS
+ **********************/
+
+/**********************
+ *   POST INCLUDES
+ **********************/
 
 /*Include all the widget and components of this library*/
 #include "widgets/dark_slider/dark_slider_gen.h"
@@ -30,51 +99,6 @@ extern "C" {
 #include "components/headings/h3_gen.h"
 #include "components/scratchpad_gen.h"
 #include "screens/home_gen.h"
-
-/*********************
- *      DEFINES
- *********************/
-
-// TODO: should these definitions be prefixed with the project name?
-
-
-/**********************
- *      TYPEDEFS
- **********************/
-
-/**********************
- * GLOBAL VARIABLES
- **********************/
-
-/* Global Styles */
-
-/* Fonts */
-extern lv_font_t * inter_sm;
-extern lv_font_t * inter_md;
-extern lv_font_t * inter_xl;
-
-/* Images */
-extern const void * lvgl_logo;
-extern const void * wink;
-
-/* Subjects */
-extern lv_subject_t subject_room_1_temp;
-
-/**********************
- * GLOBAL PROTOTYPES
- **********************/
-
-/* callbacks */
-
-/**
- * Initialize the component library
- */
-
-void examples_init_gen(const char * asset_path);
-
-/**********************
- *      MACROS
- **********************/
 
 #ifdef __cplusplus
 } /*extern "C"*/

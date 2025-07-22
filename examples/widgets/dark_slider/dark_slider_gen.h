@@ -13,7 +13,13 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lvgl/lvgl.h"
+#ifdef LV_LVGL_H_INCLUDE_SIMPLE
+    #include "lvgl.h"
+#else
+    #include "lvgl/lvgl.h"
+#endif
+
+#include "examples_gen.h"
 
 /*********************
  *      DEFINES
@@ -22,6 +28,8 @@ extern "C" {
 /**********************
  *      TYPEDEFS
  **********************/
+
+
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -36,11 +44,11 @@ lv_obj_t * dark_slider_create(lv_obj_t * parent);
 
 
 /**
- * Set the color
+ * dark_slider color
  * @param obj   pointer to a dark_slider
  * @param color  color
  */
-void dark_slider_set_color(lv_obj_t * obj, lv_color_t color);
+void dark_slider_set_color(lv_obj_t * dark_slider, lv_color_t color);
 
 /**********************
  *      MACROS
